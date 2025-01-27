@@ -6,7 +6,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const PORT = process.env.PORT || 4001
+const PORT = 4001
 const app = express();
 
 // ! DB
@@ -15,11 +15,11 @@ const app = express();
 app.use(cors())
 
 // ? body parser
-app.use(express.json)
+app.use(express.json())
 
 // ? routes
 app.get("/", (req, res) => {
-res.send("welcome to my api")
+    res.send("Welcome to my api")
 })
 
 // ! app.use("/api/users", userRoutes)
